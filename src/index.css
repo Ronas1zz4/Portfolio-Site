@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(../src/assets/Texture.png);
+}
+
+
+@font-face {
+    font-family: "Draper";
+    src: url("/fonts/Draper.ttf");
+  }
+  
+  @font-face {
+    font-family: "Neue";
+    src: url("/fonts/NeueMontreal-Regular.ttf");
+  }
+
+  h1,h2,h3,h4,h5{
+    font-family: "Draper";
+  }
+  p{
+    font-family: "Neue";
+  }
+  .about__heading{
+    font-family: "Neue";
+  }
+  ul{
+    font-family: "Draper";
+  }
+  .container{
+    max-width: 1480px;
+    margin: auto;
+  }
