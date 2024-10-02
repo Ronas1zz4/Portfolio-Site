@@ -10,7 +10,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <header className="bg-black max-h-screen w-full flex flex-col text-center p-4 lg:p-6">
+      <header className="header bg-black max-h-screen w-full flex flex-col text-center p-4 lg:p-6">
      
         <nav className= "h-[84px] w-full ">
           <div className="flex justify-between items-center relative 2xl:container m-auto bg-black ">
@@ -46,7 +46,7 @@ const Navbar = () => {
         </nav>
         <div
           className="header__text w-full h-screen flex justify-center items-center">
-          <h1 className="text-white text-3xl sm:text-4xl md:text-[44px] lg:text-[56px] xl:text-[64px] 2xl:text-[68px] md:leading-none  w-full"><span className="text-3xl sm:text-4xl md:text-[40px] lg:text-[52px] xl:text-[60px] 2xl:text-[68px]">Hello I'm Ronas </span> <br/><span className="2xl:text-[84px]">Code, Break, Repeat</span> </h1>
+          <h1 className="text-white leading-none text-[24px] sm:text-4xl md:text-[44px] lg:text-[56px] xl:text-[64px] 2xl:text-[68px] md:leading-none  w-full"><span className="text-[24px] sm:text-4xl md:text-[40px] lg:text-[52px] xl:text-[60px] 2xl:text-[68px]">Hello I'm Ronas </span> <br/><span className="2xl:text-[84px]">Code, Break, Repeat</span> </h1>
         </div>
 
       </header>

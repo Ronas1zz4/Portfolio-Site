@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 *{
   margin: 0;
   padding: 0;
@@ -25,7 +24,7 @@
     font-family: "Draper";
   }
   p{
-    font-family: "Neue";
+     font-family: "Neue";
   }
   .about__heading{
     font-family: "Neue";
