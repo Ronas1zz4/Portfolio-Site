@@ -1,15 +1,16 @@
 import React from 'react'
 import Navbar from './components/Pages/Navbar'
 import About from './components/Pages/About'
-import Project from './components/Pages/Project'
-import Experience from './components/Pages/Experience'
+import Experience from './components/Pages/Experience/Experience'
+import Contact from './components/Pages/Contact'
 
 const App = () => {
   return (
     <>
-<Navbar/>
+<Navbar />
 <About/>
 <Experience/>
+<Contact/>
     </>
 
   )

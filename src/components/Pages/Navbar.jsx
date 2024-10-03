@@ -10,7 +10,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <header className="header bg-black max-h-screen w-full flex flex-col text-center p-4 lg:p-6">
+      <header className="header bg-black max-h-screen w-full flex flex-col text-center p-4 lg:p-16 xl">
      
         <nav className= "h-[84px] w-full ">
           <div className="flex justify-between items-center relative 2xl:container m-auto bg-black ">
@@ -24,10 +24,10 @@ const Navbar = () => {
             </div>
           </div>
           
-          {isMenuOpen ? (
-            <div className="bg-black duration-100000 text-white text-center relative h-[calc(100vh-120px)] flex flex-col justify-center transition dura">
+          {isMenuOpen ? ( 
+            <div className="bg-black duration-100000 text-white text-center relative h-[calc(100vh-120px)] lg:h-[calc(100vh-160px)] flex flex-col justify-center transition dura">
               <h1 className="text-5xl md:text-6xl lg:text-[72px] 2xl:text-[80px]">Menu</h1>
-              <ul className="text-4xl mt-4 md:text-5xl lg:text-[56px] 2xl:text-[64px] flex flex-col sm:gap-2 hover:bg-red-500 hover:duration-1000">
+              <ul className="text-4xl mt-4 md:text-5xl lg:text-[56px] 2xl:text-[64px] flex flex-col sm:gap-2">
                 <li className="mt-5">
                   <a href="">About</a>
                 </li>
