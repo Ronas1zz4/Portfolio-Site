@@ -35,3 +35,20 @@
     max-width: 1480px;
     margin: auto;
   }
+.marquee{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Neue";
+  gap: 32px;
+  text-transform: uppercase;
+}
+.container1{
+  font-family: sans-serif;
+  text-align: center;
+  border: 2px solid black;
+  height: 300px;
+  width: 500px;
+  margin: auto;
+}
