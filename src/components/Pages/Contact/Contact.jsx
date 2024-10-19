@@ -33,12 +33,10 @@ const Contact = () => {
           </h3>
         </div>
         <div
-          // className="mt-20 w-full"
-          // onMouseEnter={() => setHidden(false)}
-          // onMouseLeave={() => setHidden(true)}
+          className="mt-20 w-full"
+          onMouseEnter={() => setHidden(false)}
+          onMouseLeave={() => setHidden(true)}
         >
-          {/* {hidden ? <ContactList/> : <ContactMarquee />} */}
-
           <ContactList/>
         </div>
       </div>

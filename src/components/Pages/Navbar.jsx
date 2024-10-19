@@ -18,14 +18,14 @@ const Navbar = () => {
               <img src={Logo} alt="" width="84px" />
             </div>
             <div className="nav__links">
-              <button className="text-white " onClick={toggleMenu}>
+              <button className="text-white " onClick={toggleMenu} >
                 <MenuButton/>
               </button>
             </div>
           </div>
           
           {isMenuOpen ? ( 
-            <div className="bg-black duration-100000 text-white text-center relative h-[calc(100vh-120px)] lg:h-[calc(100vh-160px)] flex flex-col justify-center transition dura">
+            <div className=" bg-black text-white text-center relative h-[calc(100vh-120px)] lg:h-[calc(100vh-160px)] flex flex-col justify-center ">
               <h1 className="text-5xl md:text-6xl lg:text-[72px] 2xl:text-[80px]">Menu</h1>
               <ul className="text-4xl mt-4 md:text-5xl lg:text-[56px] 2xl:text-[64px] flex flex-col sm:gap-2">
                 <li className="mt-5">
