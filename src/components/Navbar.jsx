@@ -5,6 +5,7 @@ import { IoIosClose } from "react-icons/io";
 import { Links } from "./Links";
 import Logo from '../assets/logo.png'
 import { FlipLink } from "./Links";
+import ScrollReveal from "./ScrollReveal";
 
 const navLinks = [
   { title: "About", href: "/" },
@@ -12,6 +13,7 @@ const navLinks = [
   { title: "Experience", href: "/" },
   { title: "Contact", href: "/" },
 ];
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -57,8 +59,10 @@ const Navbar = () => {
   };
 
   return (
+    <>
     <header className="bg-black h-screen w-full  text-center p-4 lg:p-8 xl">
-      <nav className="flex justify-between items-center py-8 lg:py-6   container m-auto w-full lg:border border-customGrey px-10 bg-white-0  b bg-clip-padding bg-opacity-0 bg-gray-700 ">
+      <nav className="flex justify-between items-center py-8 lg:py-6   container m-auto w-full   px-10 bg-white-0  b bg-clip-padding bg-opacity-0 bg-gray-700 ">
+        
         <div className="flex items-center text-white">
           <img src={Logo} alt="" className="w-20" />
         </div>
@@ -69,7 +73,7 @@ const Navbar = () => {
           className="cursor-pointer lg:hidden text-md text-black"
           onClick={toggleMenu}
         >
-          <CiMenuFries className="text-3xl text-white" />
+          <CiMenuFries className="text-2xl xl:text-3xl text-white" />
         </div>
       </nav>
       <AnimatePresence>
@@ -101,7 +105,7 @@ const Navbar = () => {
                   return (
                     <div
                       key={index}
-                      className="overflow-hidden font-customNeue text-[32px]"
+                      className="overflow-hidden font-customNeue text-[30px]"
                     >
                       <MobileNavLink
                         key={index}
@@ -113,9 +117,12 @@ const Navbar = () => {
                 })}
               </motion.div>
             </div>
+        
           </motion.div>
+         
         )}
-      </AnimatePresence>
+        </AnimatePresence>
+   
       <motion.div
         className="header__text w-full h-[calc(100vh-164px)] flex justify-center items-center"
       >
@@ -127,8 +134,10 @@ const Navbar = () => {
           <span className="2xl:text-[84px]">Code, Break, Repeat</span>
         </h1>
       </motion.div>
+      
     </header>
-  );
+    </>
+  )
 };
 
 export default Navbar;
@@ -137,7 +146,7 @@ const mobileLinkVars = {
   initial: {
     y: "30vh",
     transition: {
-      duration: 0.5,
+      duration: 1,
       ease: [0.37, 0, 0.63, 1],
     },
   },
@@ -145,7 +154,7 @@ const mobileLinkVars = {
     y: 0,
     transition: {
       ease: [0, 0.55, 0.45, 1],
-      duration: 0.7,
+      duration: .7,
     },
   },
 };
@@ -154,7 +163,7 @@ const MobileNavLink = ({ title, href }) => {
   return (
     <motion.div
       variants={mobileLinkVars}
-      className="text-5xl uppercase text-black"
+      className="text-2xl uppercase text-black"
     >
       <FlipLink href={href}>{title}</FlipLink>
     </motion.div>

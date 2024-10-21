@@ -1,7 +1,8 @@
 import React from "react";
 import { FaArrowDownLong } from "react-icons/fa6";
-import FirstPic from "../../assets/FirstPic.png";
-import SecondPic from "../../assets/SecondPic.png";
+import FirstPic from '../assets/FirstPic.png'
+import SecondPic from '../assets/SecondPic.png'
+
 import { backIn } from "framer-motion";
 
 const About = () => {
