@@ -55,3 +55,9 @@
 body{
   background: url(./assets/Texture.png),#dadada;
 }
+.mobscreen{
+  background: url(./assets/Texture.png),#dadada;
+}
+.slider{
+  background: url(./assets/Texture.png),#ffffff;
+}

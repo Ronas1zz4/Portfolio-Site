@@ -6,7 +6,7 @@ import { GoArrowRight } from "react-icons/go";
 
 const ProjectCard = (props) => {
   return (
-    <div className="relative project_card  group hover group-hover:transition w-full h-[320px] lg:w-full  xl:h-[300px] border border-black border-r-0 group-hover:duration-1000 ">
+    <div className="relative project_card p-0 group hover group-hover:transition w-full h-[320px] lg:w-full  xl:h-[300px] border border-black border-r-0 group-hover:duration-1000 ">
       <img
         src={Toxic}
         alt=""
@@ -17,7 +17,7 @@ const ProjectCard = (props) => {
           {props.name}
         </h1>
         <div>
-        <GoArrowRight className="h-fit transition duration-500 p-2 bg-white border text-[40px] rounded-full group-hover:-rotate-45 border-customGrey" />
+        <GoArrowRight className="h-fit transition duration-500 p-2 border text-[40px] rounded-full group-hover:-rotate-45 border-customGrey" />
         </div>
        
       </div>

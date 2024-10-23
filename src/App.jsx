@@ -4,6 +4,7 @@ import { Links } from './components/Links'
 import ScrollReveal from './components/ScrollReveal'
 import Projects from './Pages/Project/Projects'
 import About from './Pages/About'
+import Experience from './Pages/Experience/Experience'
 
 
 const App = () => {
@@ -11,9 +12,10 @@ const App = () => {
     <>
 <Navbar />
 <About/>
-{/* <Experience/>
-<Contact/>  */}
 <Projects/>
+<Experience/>
+{/* <Contact/>  */} 
+
 
     </>
 

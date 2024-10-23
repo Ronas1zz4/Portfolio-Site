@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import { GoArrowRight } from "react-icons/go";
 import Toxic from "../../assets/Firstpic.png";
 import ProjectCard from "./ProjectCard";
+import MarqueeSlider from "../../components/MarqueeSlider";
 
 const Projects = () => {
   const responsive = {
@@ -63,8 +64,10 @@ const Projects = () => {
     } = rest;
 
     return (
-      <div className="carousel-button-group flex justify-between w-full  lg:px-16 px-4 p-1
-       mt-4 md:mt-6 lg:mt-10">
+      <div
+        className="carousel-button-group flex justify-between w-full  lg:px-16 px-4 p-1
+       mt-4 md:mt-6 lg:mt-10"
+      >
         <button
           className={`text-[12px] md:text-[16px] lg:py-3 px-5 font-customDraper  border border-black  ${
             currentSlide === 0 ? "disabled" : ""
@@ -85,41 +88,48 @@ const Projects = () => {
   };
   return (
     <>
-      <div className="relative h-screen w-full">
-      <h3 className="text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[72px] p-4 lg:px-16 md:py-8
-    lg:py-16 container">
-        Projects 
-        </h3>
-        <div className="container m-auto ">
-          <Carousel 
-            responsive={responsive}
-            additionalTransfrom={0}
-            arrows={false}
-            infinite={true}
-            renderButtonGroupOutside={true}
-            customButtonGroup={<ButtonGroup />}
-            autoPlaySpeed={3000}
-            draggable={false}
-            centerMode={false}
-            dotListClass=""
-            className="w-full  "
-            focusOnSelect={false}
-            itemClass=""
-            keyBoardControl
-            minimumTouchDrag={80}
-            pauseOnHover
-            renderArrowsWhenDisabled={false}
-            rewind={false}
-            rewindWithAnimation={false}
-            rtl={false}
-            shouldResetAutoplay
-            showDots={false}
-            sliderClass=""
-            slidesToSlide={1}
-            swipeable
+      <div className="relative h-fit lg:h-screen my-10 xl:my-0  xl:mt-10  w-full ">
+        <div className="">
+          <h3
+            className="text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[72px] p-4 lg:px-16 md:py-8
+    lg:py-16 container"
           >
-            {project}
-          </Carousel>
+            Projects
+          </h3>
+          <div className="container m-auto ">
+            <Carousel
+              responsive={responsive}
+              additionalTransfrom={0}
+              arrows={false}
+              infinite={true}
+              renderButtonGroupOutside={true}
+              customButtonGroup={<ButtonGroup />}
+              autoPlaySpeed={3000}
+              draggable={false}
+              centerMode={false}
+              dotListClass=""
+              className="w-full  "
+              focusOnSelect={false}
+              itemClass=""
+              keyBoardControl
+              minimumTouchDrag={80}
+              pauseOnHover
+              renderArrowsWhenDisabled={false}
+              rewind={false}
+              rewindWithAnimation={false}
+              rtl={false}
+              shouldResetAutoplay
+              showDots={false}
+              sliderClass=""
+              slidesToSlide={1}
+              swipeable
+            >
+              {project}
+            </Carousel>
+          </div>
+          <div className="mt-10 lg:mt-20">
+            <MarqueeSlider />
+          </div>
         </div>
       </div>
     </>

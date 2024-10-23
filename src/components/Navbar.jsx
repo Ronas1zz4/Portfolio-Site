@@ -83,7 +83,7 @@ const Navbar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="fixed left-0 top-0 w-full h-screen origin-top bg-customGrey text-black p-10"
+            className="mobscreen fixed left-0 top-0 w-full h-screen origin-top   text-black p-10"
           >
             <div className="flex h-full flex-col">
               <div className="flex justify-end">
@@ -128,8 +128,8 @@ const Navbar = () => {
       >
         <h1 className="text-white leading-none text-[24px] sm:text-4xl md:text-[44px] lg:text-[56px] xl:text-[64px] 2xl:text-[68px] md:leading-none  w-full">
           <span className="text-[24px] sm:text-4xl md:text-[40px] lg:text-[52px] xl:text-[60px] 2xl:text-[68px]">
-            Hello I'm Ronas{" "}
-          </span>{" "}
+            Hello I'm Sujan
+          </span>
           <br />
           <span className="2xl:text-[84px]">Code, Break, Repeat</span>
         </h1>

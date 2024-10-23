@@ -1,8 +1,5 @@
 import React from "react";
 import { FaArrowDownLong } from "react-icons/fa6";
-import FirstPic from '../assets/FirstPic.png'
-import SecondPic from '../assets/SecondPic.png'
-
 import { backIn } from "framer-motion";
 
 const About = () => {
@@ -39,7 +36,7 @@ const About = () => {
           </div>
           <div className=" md:w-6/12 lg:w-7/12 md:flex md:justify-center md:items-center">
             <p className="text-[16px] sm:text-[20px]  lg:text-[24px] md:p-10  w-full mt-4 md:mt-0">
-              Hi there! I'm Ronas Tiwari, your not-so-average front-end
+              Hi there! I'm Sujan Dhakal, your not-so-average front-end
               developer.I have a “strong interest” in making websites look good
               and function—most of the time.
             </p>
