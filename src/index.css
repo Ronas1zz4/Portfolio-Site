@@ -44,16 +44,9 @@
   gap: 32px;
   text-transform: uppercase;
 }
-.container1{
-  font-family: sans-serif;
-  text-align: center;
-  border: 2px solid black;
-  height: 300px;
-  width: 500px;
-  margin: auto;
-}
+
 body{
-  background: url(./assets/Texture.png),#dadada;
+  background: url(./assets/Texture.png),#afafaf;
 }
 .mobscreen{
   background: url(./assets/Texture.png),#dadada;

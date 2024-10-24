@@ -1,23 +1,28 @@
 import React from "react";
-import { FaArrowDownLong } from "react-icons/fa6";
 import { backIn } from "framer-motion";
+import Pictureone from "../assets/pic-1.png"
+import Picturetwo from "../assets/pic-2.png"
+import { FlipLink } from "../components/Links";
+import { GoArrowDown } from "react-icons/go";
 
 const About = () => {
   return (
     <div
-      className="about__container container m-auto h-fit md:h-screen p-4 lg:px-16 md:py-8
-    lg:py-16">
+      className="relative about__container md:h-screen p-4 lg:px-16 md:py-8
+    lg:py-16 ">
+      <div className="container m-auto h-fit ">
       <div className="about__heading flex justify-between ">
-        <h3 className="text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[72px]">
+        <h3 className="text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[86px]">
           About Me 
         </h3>
         <button className="">
           <a
             href="../assets/Resume.pdf"
             download="Resume.pdf"
-            className="flex items-center gap-2 border-b border-black text-[18px] lg:text-[24px] "
+            className="flex items-center gap-4 border-b border-black text-[18px] lg:text-[24px] "
           >
-            Resume <FaArrowDownLong />
+           <FlipLink className="text-lowercase">Resume  </FlipLink>
+          <GoArrowDown/>
           </a>
         </button>
       </div>
@@ -28,9 +33,9 @@ const About = () => {
         <div className=" flex flex-col md:flex-row md:border-y md:border-black">
           <div className="h-[264px]  md:h-[36vh] md:w-6/12 lg:w-5/12 00 md:border-r md:border-black w-full flex justify-center items-center lg:py-8">
             <img
-              src=""
+              src={Pictureone}
               alt="Ronas Tiwari"
-              className=" w-full
+              className=" w-full object-cover 
           h-full  md:h-[260px]  md:w-10/12 "
             />
           </div>
@@ -48,10 +53,10 @@ const About = () => {
           md:border-l md:border-black"
           >
             <img
-              src=""
+              src={Picturetwo}
               alt="Ronas Tiwari"
               className=" w-full
-          h-full  md:h-[260px]  md:w-10/12 "
+          h-full  md:h-[260px]  md:w-10/12 object-cover "
             />
           </div>
           <div className=" md:w-6/12 lg:w-7/12 md:flex md:justify-center md:items-center">
@@ -65,6 +70,7 @@ const About = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

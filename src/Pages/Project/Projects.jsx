@@ -66,7 +66,7 @@ const Projects = () => {
     return (
       <div
         className="carousel-button-group flex justify-between w-full  lg:px-16 px-4 p-1
-       mt-4 md:mt-6 lg:mt-10"
+       mt-4 md:mt-6 lg:mt-10 container"
       >
         <button
           className={`text-[12px] md:text-[16px] lg:py-3 px-5 font-customDraper  border border-black  ${
@@ -88,15 +88,15 @@ const Projects = () => {
   };
   return (
     <>
-      <div className="relative h-fit lg:h-screen my-10 xl:my-0  xl:mt-10  w-full ">
+      <div className="relative h-fit lg:h-screen my-10 xl:my-0 w-full">
         <div className="">
           <h3
-            className="text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[72px] p-4 lg:px-16 md:py-8
+            className="text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[86px] p-4 lg:px-16 md:py-8
     lg:py-16 container"
           >
             Projects
           </h3>
-          <div className="container m-auto ">
+          <div className=" m-auto ">
             <Carousel
               responsive={responsive}
               additionalTransfrom={0}
