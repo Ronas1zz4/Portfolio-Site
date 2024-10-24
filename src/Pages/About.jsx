@@ -1,10 +1,9 @@
 import React from "react";
-import { backIn } from "framer-motion";
+import { motion, useTransform } from "framer-motion";
 import Pictureone from "../assets/pic-1.png";
 import Picturetwo from "../assets/pic-2.png";
 import { FlipLink } from "../components/Links";
 import { GoArrowDown } from "react-icons/go";
-import { motion, useTransform } from "framer-motion";
 
 const About = ({ scrollYProgress }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
@@ -15,7 +14,7 @@ const About = ({ scrollYProgress }) => {
     visible: (custom) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.3, delay:0.3 },
+      transition: { duration: 0.3, delay: 0.3 },
     }),
   };
 
@@ -23,7 +22,7 @@ const About = ({ scrollYProgress }) => {
     <motion.section
       style={{ scale, rotate }}
       id="about"
-      className="relative mobscreen about about__container xl:h-screen p-4 lg:px-16 md:py-8 lg:py-16"
+      className="relative mobscreen about about__container p-4 lg:px-16 md:py-8 lg:py-16"
     >
       <div className="container m-auto h-fit">
         <motion.div
@@ -34,12 +33,12 @@ const About = ({ scrollYProgress }) => {
         >
           <motion.h3
             variants={fadeInUpVariants}
-            custom={.4}
+            custom={0.4}
             className="text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[86px]"
           >
             About Me
           </motion.h3>
-          <button className="">
+          <button>
             <a
               href="../assets/Resume.pdf"
               download="Resume.pdf"
@@ -50,11 +49,11 @@ const About = ({ scrollYProgress }) => {
             </a>
           </button>
         </motion.div>
-        <div className="about__grid grid-cols-2 space-y-8 md:space-y-8 mt-4 sm:mt-6 md:mt-10 lg:mt-16">
-       
+
+        <div className="about__grid grid-cols-1 md:grid-cols-2 gap-y-8 mt-4 sm:mt-6 md:mt-10 lg:mt-16">
           <div className="flex flex-col md:flex-row md:border-y md:border-black">
             <motion.div
-              className="md:w-6/12 lg:w-5/12 w-full flex justify-center items-center lg:py-8 "
+              className="md:w-6/12 lg:w-5/12 w-full flex justify-center items-center lg:py-8"
               variants={fadeInUpVariants}
               initial="hidden"
               whileInView="visible"
@@ -62,7 +61,7 @@ const About = ({ scrollYProgress }) => {
             >
               <img
                 src={Pictureone}
-                alt="Ronas Tiwari"
+                alt="Sujan Dhakal"
                 className="w-full object-cover h-full md:h-[260px] md:w-10/12"
               />
             </motion.div>
@@ -73,7 +72,7 @@ const About = ({ scrollYProgress }) => {
               whileInView="visible"
               custom={3}
             >
-              <p className=" text-[16px] sm:text-[20px] lg:text-[24px] md:p-10 w-full mt-4 md:mt-0">
+              <p className="text-[16px] sm:text-[20px] lg:text-[24px] md:p-10 w-full mt-4 md:mt-0">
                 Hi there! I'm Sujan Dhakal, your not-so-average front-end
                 developer. I have a “strong interest” in making websites look good
                 and function—most of the time.
@@ -81,7 +80,6 @@ const About = ({ scrollYProgress }) => {
             </motion.div>
           </div>
 
-         
           <div className="flex flex-col md:flex-row md:border-y md:border-black">
             <motion.div
               className="md:w-6/12 lg:w-5/12 w-full flex justify-center items-center lg:py-8 md:order-2 md:border-l md:border-black"
@@ -92,7 +90,7 @@ const About = ({ scrollYProgress }) => {
             >
               <img
                 src={Picturetwo}
-                alt="Ronas Tiwari"
+                alt="Sujan Dhakal"
                 className="w-full h-full md:h-[260px] md:w-10/12 object-cover"
               />
             </motion.div>

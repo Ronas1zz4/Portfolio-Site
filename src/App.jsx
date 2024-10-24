@@ -29,7 +29,7 @@ const {scrollYProgress}=useScroll({
 
   return (
     <>
-      <div ref={containers} className="relative h-[200vh]  gap-0">
+      <div ref={containers} className="relative h-[190vh]  gap-0">
         <Navbar scrollYProgress={scrollYProgress}/>
         <About scrollYProgress={scrollYProgress}/>
         <Projects/>
