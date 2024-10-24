@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import ContactList from "./ContactList";
 import Footer from "../../components/Footer";
 import { GoArrowRight } from "react-icons/go";
 
 const Contact = () => {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const headingY = useTransform(scrollYProgress, [0, 1], [-50, 0]);
+  const contactListY = useTransform(scrollYProgress, [0, 1], [80, 0]);
+
+  // Define animation variants for stronger reveal effects
+  const revealVariants = {
+    hidden: { opacity: 0, y: 50 }, // Stronger initial position
+    visible: { opacity: 1, y: 0 },
+  };
+
   const contactData = [
     {
       id: 1,
@@ -30,25 +47,45 @@ const Contact = () => {
       icon: <GoArrowRight />,
     },
     {
-      id:5,
-      name:"Email",
-      url:"mailto:saralronas@gmail.com",
-      icon:<GoArrowRight/>
-    }
+      id: 5,
+      name: "Email",
+      url: "mailto:saralronas@gmail.com",
+      icon: <GoArrowRight />,
+    },
   ];
 
   return (
-    <section className="w-full h-screen mt-0 relative  ">
+    <motion.section
+      ref={sectionRef}
+      id="contact"
+      className="w-full h-screen mt-0 relative"
+    >
       <div>
-        <h3 className=" text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[100px] p-4 lg:px-16 md:py-8 lg:py-16 container">
+        <motion.h3
+          initial="hidden"
+          whileInView="visible"
+          variants={revealVariants}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          style={{ y: headingY }}
+          className="text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[100px] p-4 lg:px-16 md:py-8 lg:py-16 container text-customgrey"
+        >
           Contact
-        </h3>
+        </motion.h3>
       </div>
-      <div className="mt-4">
+
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={revealVariants}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        style={{ y: contactListY }}
+        className="mt-4"
+      >
         <ContactList contactData={contactData} />
-      </div>
-      <Footer/>
-    </section>
+      </motion.div>
+      
+      <Footer /> 
+    </motion.section>
   );
 };
 

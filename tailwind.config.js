@@ -16,7 +16,8 @@ export default {
           light:'#E9E9E9',
         },
         customGrey:'#B1B1B1',
-        customHover:'#444444'
+        customHover:'#444444',
+       
         }
       },
     },

@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 export const Links = () => {
   return (
     <section className="flex gap-16">
-      <FlipLink href="#">About</FlipLink>
-      <FlipLink href="#">Projects</FlipLink>
-      <FlipLink href="#">Experience</FlipLink>
-      <FlipLink href="#">Contact</FlipLink>
+      <FlipLink href="#about">About</FlipLink>
+      <FlipLink href="#projects">Projects</FlipLink>
+      <FlipLink href="#experience">Experience</FlipLink>
+      <FlipLink href="#contact">Contact</FlipLink>
     </section>
   );
 };
