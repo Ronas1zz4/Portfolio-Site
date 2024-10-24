@@ -21,7 +21,7 @@ export const FlipLink = ({ children, href }) => {
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap lg:text-[20px] xl:text-[24px] uppercase"
+      className="relative block overflow-hidden whitespace-nowrap lg:text-[20px] uppercase"
       style={{
         lineHeight: 1.5,
       }}

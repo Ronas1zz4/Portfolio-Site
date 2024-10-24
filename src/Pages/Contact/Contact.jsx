@@ -12,12 +12,11 @@ const Contact = () => {
     offset: ["start end", "end start"],
   });
 
-  const headingY = useTransform(scrollYProgress, [0, 1], [-50, 0]);
+  const headingY = useTransform(scrollYProgress, [0, 1], [0,80]);
   const contactListY = useTransform(scrollYProgress, [0, 1], [80, 0]);
 
-  // Define animation variants for stronger reveal effects
   const revealVariants = {
-    hidden: { opacity: 0, y: 50 }, // Stronger initial position
+    hidden: { opacity: 0, y: 50 }, 
     visible: { opacity: 1, y: 0 },
   };
 
@@ -58,7 +57,7 @@ const Contact = () => {
     <motion.section
       ref={sectionRef}
       id="contact"
-      className="w-full h-screen mt-0 relative"
+      className="w-full min-h-screen flex flex-col justify-between mt-0 relative mobscreen"
     >
       <div>
         <motion.h3
@@ -67,7 +66,7 @@ const Contact = () => {
           variants={revealVariants}
           transition={{ duration: 0.8, ease: "easeOut" }}
           style={{ y: headingY }}
-          className="text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[100px] p-4 lg:px-16 md:py-8 lg:py-16 container text-customgrey"
+          className="text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[100px] p-4 lg:px-16 md:py-8 lg:py-16 container "
         >
           Contact
         </motion.h3>
@@ -83,8 +82,7 @@ const Contact = () => {
       >
         <ContactList contactData={contactData} />
       </motion.div>
-      
-      <Footer /> 
+<Footer/>
     </motion.section>
   );
 };

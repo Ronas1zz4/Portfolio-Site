@@ -166,11 +166,11 @@ const Navbar = ({scrollYProgress}) => {
             className="header__text w-full h-[calc(100vh-164px)] flex justify-center items-center"
           >
             <h1 className="text-white leading-none text-[24px] sm:text-4xl md:text-[44px] lg:text-[56px] xl:text-[64px] 2xl:text-[68px] md:leading-none w-full">
-              <span className="text-[24px] sm:text-4xl md:text-[40px] lg:text-[52px] xl:text-[60px] 2xl:text-[68px]">
+              <span className="text-[24px] sm:text-4xl md:text-[40px] lg:text-[36px] xl:text-[50px] 2xl:text-[60px]">
                 Hello I'm Sujan
               </span>
               <br />
-              <span className="2xl:text-[84px]">Code, Break, Repeat</span>
+              <span className="2xl:text-[72px]">Code, Break, Repeat</span>
             </h1>
           </motion.div>
         </div>

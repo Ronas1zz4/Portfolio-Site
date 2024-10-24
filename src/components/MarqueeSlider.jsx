@@ -17,7 +17,7 @@ const MarqueeSlider = () => {
     <div>
       <Marquee
         pauseOnHover={true}
-        className="relative h-[64px] sm:h-[72px] md:h-[84px] lg:h-[100px]  text-black border-y border-black shadow-md slider xl:mt-[100px]"
+        className="relative z-1 h-[64px] sm:h-[72px] lg:h-[90px]  text-black border-y border-black shadow-md slider xl:mt-[100px]"
         autoFill={true}
         speed={70}
         pause

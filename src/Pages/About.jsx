@@ -15,7 +15,7 @@ const About = ({ scrollYProgress }) => {
     visible: (custom) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.3, delay:0.2 },
+      transition: { duration: 0.3, delay:0.3 },
     }),
   };
 
@@ -23,7 +23,7 @@ const About = ({ scrollYProgress }) => {
     <motion.section
       style={{ scale, rotate }}
       id="about"
-      className="relative mobscreen about about__container md:h-screen p-4 lg:px-16 md:py-8 lg:py-16"
+      className="relative mobscreen about about__container xl:h-screen p-4 lg:px-16 md:py-8 lg:py-16"
     >
       <div className="container m-auto h-fit">
         <motion.div
@@ -54,7 +54,7 @@ const About = ({ scrollYProgress }) => {
        
           <div className="flex flex-col md:flex-row md:border-y md:border-black">
             <motion.div
-              className="h-[264px] md:h-[36vh] md:w-6/12 lg:w-5/12 w-full flex justify-center items-center lg:py-8"
+              className="md:w-6/12 lg:w-5/12 w-full flex justify-center items-center lg:py-8 "
               variants={fadeInUpVariants}
               initial="hidden"
               whileInView="visible"
@@ -67,7 +67,7 @@ const About = ({ scrollYProgress }) => {
               />
             </motion.div>
             <motion.div
-              className="md:w-6/12 lg:w-7/12 md:flex md:justify-center md:items-center border-l border-black"
+              className="md:w-6/12 lg:w-7/12 md:flex md:justify-center md:items-center md:border-l border-black"
               variants={fadeInUpVariants}
               initial="hidden"
               whileInView="visible"
@@ -84,7 +84,7 @@ const About = ({ scrollYProgress }) => {
          
           <div className="flex flex-col md:flex-row md:border-y md:border-black">
             <motion.div
-              className="h-[264px] md:h-[36vh] md:w-6/12 lg:w-5/12 w-full flex justify-center items-center lg:py-8 md:order-2 md:border-l md:border-black"
+              className="md:w-6/12 lg:w-5/12 w-full flex justify-center items-center lg:py-8 md:order-2 md:border-l md:border-black"
               variants={fadeInUpVariants}
               initial="hidden"
               whileInView="visible"

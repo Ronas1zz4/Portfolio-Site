@@ -2,13 +2,16 @@ import React, { useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { GoArrowRight } from "react-icons/go";
-import Toxic from "../../assets/Firstpic.png";
+
 import ProjectCard from "./ProjectCard";
 import MarqueeSlider from "../../components/MarqueeSlider";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Musica from "../../assets/musica.jpg";
+import Toxic from "../../assets/toxic.jpg";
+import Nepal from "../../assets/nepal.jpg";
+import Signa from "../../assets/signalink.jpg";
 
 const Projects = () => {
-
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -16,10 +19,9 @@ const Projects = () => {
     offset: ["start end", "end start"],
   });
 
-  
-  const headingY = useTransform(scrollYProgress, [0, 1], [0, -50]); // 
-  const carouselY = useTransform(scrollYProgress, [0, 1], [50, -120]); // 
-  const marqueeY = useTransform(scrollYProgress, [0, 1], [0, -100]); // 
+  const headingY = useTransform(scrollYProgress, [0, 1], [0, -50]);
+  const carouselY = useTransform(scrollYProgress, [0, 1], [50, -120]);
+  const marqueeY = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   const responsive = {
     superLargeDesktop: {
@@ -43,27 +45,31 @@ const Projects = () => {
   const projectData = [
     {
       id: 1,
-      image: Toxic,
-      name: "Toxic Comment Classifier",
+      image: Musica,
+      name: "Musica App",
       icon: <GoArrowRight />,
+      url: "https://musica-ams.vercel.app/",
     },
     {
       id: 2,
       image: Toxic,
-      name: "Flappy Bird",
+      name: "Toxic Comment Classifier",
       icon: <GoArrowRight />,
+      url: "https://github.com/Ronas1zz4/Comment-ClassificationModel",
     },
     {
       id: 3,
-      image: Toxic,
+      image: Signa,
       name: "SignaLink",
       icon: <GoArrowRight />,
+      url: "https://musica-ams.vercel.app/",
     },
     {
       id: 4,
-      image: Toxic,
-      name: "Associate",
+      image: Nepal,
+      name: "Discover Nepal",
       icon: <GoArrowRight />,
+      url: "https://github.com/Ronas1zz4/DiscoverNepal",
     },
   ];
 
@@ -73,6 +79,7 @@ const Projects = () => {
       name={item.name}
       image={item.image}
       icon={item.icon}
+      url={item.url}
     />
   ));
 
@@ -82,9 +89,9 @@ const Projects = () => {
     } = rest;
 
     return (
-      <div className="carousel-button-group flex justify-between w-full lg:px-16 px-4 p-1 mt-4 md:mt-6 lg:mt-10 container">
+      <div className="carousel-button-group flex justify-between w-full lg:px-16 px-4 container">
         <button
-          className={`text-[12px] md:text-[16px] lg:py-3 px-5 font-customDraper border border-black ${
+          className={`text-[12px] md:text-[16px] lg:py-3 hover:bg-black hover:text-white duration-500 px-5 mt-8 font-customDraper border border-black ${
             currentSlide === 0 ? "disabled" : ""
           }`}
           onClick={() => previous()}
@@ -93,7 +100,7 @@ const Projects = () => {
           Back
         </button>
         <button
-          className="text-[12px] md:text-[16px] py-3 px-5 border border-black font-customDraper"
+          className="text-[12px] md:text-[16px] py-3 px-5 border border-black font-customDraper mt-8 hover:bg-black hover:text-white duration-500"
           onClick={() => next()}
         >
           Next
@@ -103,63 +110,60 @@ const Projects = () => {
   };
 
   return (
-    <>
-      <motion.section
-        ref={sectionRef}
-        id="projects"
-        className="relative h-fit lg:h-screen  xl:my-0 w-full "
-      >
-        <div>
-          {/* Parallax for Heading */}
-          <motion.h3
-            style={{ y: headingY }}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[86px] p-4 lg:px-16 md:py-8 lg:py-16 container"
+    <motion.section
+      ref={sectionRef}
+      id="projects"
+      className="relative w-full my-4 lg:my-0"
+    >
+      <div>
+        <motion.h3
+          style={{ y: headingY }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-2xl sm:text-[28px] md:text-[32px] lg:text-[48px] xl:text-[86px] p-4 lg:px-16 md:py-8 lg:py-16 container"
+        >
+          Projects
+        </motion.h3>
+
+        <motion.div style={{ y: carouselY }} className="lg:mt-4 mt-4">
+          <Carousel
+            responsive={responsive}
+            additionalTransfrom={0}
+            arrows={false}
+            infinite={true}
+            renderButtonGroupOutside={true}
+            customButtonGroup={<ButtonGroup />}
+            autoPlaySpeed={3000}
+            draggable={false}
+            centerMode={false}
+            dotListClass=""
+            className=""
+            focusOnSelect={false}
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            pauseOnHover
+            renderArrowsWhenDisabled={false}
+            rewind={false}
+            rewindWithAnimation={false}
+            rtl={false}
+            shouldResetAutoplay
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
           >
-            Projects
-          </motion.h3>
+            {project}
+          </Carousel>
+        </motion.div>
 
-          {/* Parallax for Carousel */}
-          <motion.div style={{ y: carouselY }} className="lg:mt-10">
-            <Carousel
-              responsive={responsive}
-              additionalTransfrom={0}
-              arrows={false}
-              infinite={true}
-              renderButtonGroupOutside={true}
-              customButtonGroup={<ButtonGroup />}
-              autoPlaySpeed={3000}
-              draggable={false}
-              centerMode={false}
-              dotListClass=""
-              className="w-full"
-              focusOnSelect={false}
-              itemClass=""
-              keyBoardControl
-              minimumTouchDrag={80}
-              pauseOnHover
-              renderArrowsWhenDisabled={false}
-              rewind={false}
-              rewindWithAnimation={false}
-              rtl={false}
-              shouldResetAutoplay
-              showDots={false}
-              sliderClass=""
-              slidesToSlide={1}
-              swipeable
-            >
-              {project}
-            </Carousel>
-          </motion.div>
-
-          <motion.div style={{ y: marqueeY }} className="mt-10 lg:mt-20">
-            <MarqueeSlider />
-          </motion.div>
-        </div>
-      </motion.section>
-    </>
+        {/* Added margin to separate MarqueeSlider from Carousel */}
+        <motion.div style={{ y: marqueeY }} className="mt-16 lg:mt-20 mb-4">
+          <MarqueeSlider />
+        </motion.div>
+      </div>
+    </motion.section>
   );
 };
 

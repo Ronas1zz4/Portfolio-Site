@@ -2,7 +2,7 @@ import { useState } from "react";
 import ContactListMarquee from "./ContactListMarquee";
 
 const ContactList = ({ contactData }) => {
-  const [hoveredId, setHoveredId] = useState(null); // Track which item is hovered
+  const [hoveredId, setHoveredId] = useState(null); 
 
   return (
     <div className="w-full relative ">
