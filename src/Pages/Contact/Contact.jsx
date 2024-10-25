@@ -48,7 +48,7 @@ const Contact = () => {
     {
       id: 5,
       name: "Email",
-      url: "mailto:saralronas@gmail.com",
+      url: "mailto:dhakalsu787@gmail.com",
       icon: <GoArrowRight />,
     },
   ];

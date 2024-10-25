@@ -11,6 +11,7 @@ import {
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import { DiNodejs } from "react-icons/di";
 import { SiFramer } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
 
 const MarqueeSlider = () => {
   return (
@@ -19,7 +20,7 @@ const MarqueeSlider = () => {
         pauseOnHover={true}
         className="relative z-1 h-[64px] sm:h-[72px] lg:h-[90px]  text-black border-y border-black shadow-md slider xl:mt-[100px]"
         autoFill={true}
-        speed={70}
+        speed={100}
         pause
       >
         <div className="flex gap-14 lg:gap-20 xl:gap-28 text-3xl md:text-[36px] lg:text-[42px] xl:text-5xl  justify-center items-center group mr-10 ">
@@ -52,6 +53,9 @@ const MarqueeSlider = () => {
           </span>
           <span>
             <FaPython />
+          </span>
+          <span>
+            <SiMysql />
           </span>
           <span>
             <SiFramer className="mr-10" />

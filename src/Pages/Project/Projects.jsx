@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { GoArrowRight } from "react-icons/go";
-
 import ProjectCard from "./ProjectCard";
 import MarqueeSlider from "../../components/MarqueeSlider";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -10,6 +9,7 @@ import Musica from "../../assets/musica.jpg";
 import Toxic from "../../assets/toxic.jpg";
 import Nepal from "../../assets/nepal.jpg";
 import Signa from "../../assets/signalink.jpg";
+import Cozy from "../../assets/Cozy-mart.png"
 
 const Projects = () => {
   const sectionRef = useRef(null);
@@ -70,7 +70,16 @@ const Projects = () => {
       name: "Discover Nepal",
       icon: <GoArrowRight />,
       url: "https://github.com/Ronas1zz4/DiscoverNepal",
-    },
+    }
+  ,
+  {
+    id:5,
+    image:Cozy,
+    name:"Cozy Mart",
+  icon: <GoArrowRight />,
+  url:"https://react-cozymart.netlify.app/"
+
+  }
   ];
 
   const project = projectData.map((item) => (
