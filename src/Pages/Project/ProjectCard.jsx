@@ -18,10 +18,7 @@ const ProjectCard = (props) => {
         <h1 className="group-hover:text-white text-white  lg:text-black duration-700 xl:text-[20px] text-[14px] cursor-pointer">
           {props.name}
         </h1>
-        
-          
         <GoArrowRight className="h-fit transition duration-500 p-2 border text-[40px] rounded-full group-hover:-rotate-45 border-black group-hover:text-white group-hover:border-white" /></a>
-      
         </div>
       </div>
     </div>

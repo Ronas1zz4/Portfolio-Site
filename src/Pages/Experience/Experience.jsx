@@ -6,7 +6,7 @@ import {
   useInView,
   useAnimation,
 } from "framer-motion";
-import ExperinceList from "./ExperinceList";
+import ExperienceList from "./ExperienceList";
 
 const Experience = () => {
   const sectionRef = useRef(null);
@@ -31,6 +31,47 @@ const Experience = () => {
     }
   }, [isInView, controls]);
 
+  const experienceData = [
+    {
+      id: 1,
+      index:"01",
+      name: "Intern",
+      company: "SpydersLab, Kathmandu",
+      duration: "6 Months",
+    },
+    {
+      id: 2,
+      index:"02",
+      name: "Intern",
+      company: "The MangoByte, Kathmandu",
+      duration: "3 Months",
+    },
+    {
+      id: 3,
+      index:"03",
+      name: "IT Help Desk",
+      company: "University of Lousiana,Monroe",
+      duration: "3 Months",
+    },
+    {
+      id: 4,
+      index:"04",
+      name: "Teaching Assistant",
+      company: "University of Lousiana,Monroe",
+      duration: "Present",
+    },
+  ];
+
+  const experiences = experienceData.map((item) => (
+    <ExperienceList
+      key={item.id}
+      index={item.index}
+      name={item.name}
+      company={item.company}
+      duration={item.duration}
+    />
+  ));
+
   return (
     <motion.div
       ref={sectionRef}
@@ -47,7 +88,7 @@ const Experience = () => {
         </motion.div>
 
         <motion.div style={{ y: contentYTransform }} className="relative">
-          <ExperinceList />
+          {experiences}
         </motion.div>
       </div>
     </motion.div>
